@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <script src="static/js/main.js" defer></script> <!-- Link to external JS file -->
+    <link rel="stylesheet" href="static/styles/styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <div id="bg">
@@ -19,6 +20,51 @@
             <button class="nav-btn" data-page="more">更多</button>
         </nav>
         <div class="header-spacer"></div> 
+    </div>
+    <div id="content">
+        <div id="page1" class="page active">
+            <div id="page1_container">
+                <!-- 左栏 -->
+                <div id="page1_left">
+                    <img id="page1_avatar" src="static/media/avatar/avatar.png" alt="头像">
+                    <h2 id="page1_big_name">Solitn</h2>
+                    <p id="page1_bio"></p>
+                    <div id="page1_skills">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">MC</span>
+                    </div>
+                </div>
+                <!-- 右栏 -->
+                <div id="page1_right">
+                    <p id="page1_quote">"我的暑假已急哭"</p>
+                </div>
+                    <div id="page1_social">
+                        <a href="https://space.bilibili.com/3632299019077665" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="B站">
+                            <svg class="social-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M6.549 5.013A1.557 1.557 0 0 1 8.106 4.52a1.557 1.557 0 0 1 1.557 1.557v.493h-3.114v-.493zm7.788 0a1.557 1.557 0 0 1 1.557-1.557 1.557 1.557 0 0 1 1.557 1.557v.493h-3.114v-.493zM4.22 7.528h15.56v9.334c0 1.72-1.394 3.114-3.114 3.114H7.334c-1.72 0-3.114-1.394-3.114-3.114V7.528z"/>
+                                <path d="M12 11.015c-1.287 0-2.332 1.045-2.332 2.332 0 1.287 1.045 2.332 2.332 2.332s2.332-1.045 2.332-2.332c0-1.287-1.045-2.332-2.332-2.332z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Solitn" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <svg class="social-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.399 3-.399s2.04.132 3 .399c2.292-1.552 3.3-1.23 3.3-1.23.653 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.694.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </a>
+                        <a href="https://mail.163.com/?to=solitn@163.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="邮箱">
+                            <svg class="social-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67z"/>
+                                <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908z"/>
+                            </svg>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        <div id="page2" class="page">
+        </div>
+        <div id="page3" class="page">
+        </div>
     </div>
 </body>
 </html>
