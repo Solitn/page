@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "name": "Web 开发",
+            "items": [
+                { "title": "个人博客", "desc": "基于 Vue3 + Vite 的极简博客", "tag": "Vue" , "link": "https://github.com/zhengyuxiang/blog"},
+                { "title": "数据可视化", "desc": "实时监控仪表盘，ECharts 驱动", "tag": "ECharts" },
+                { "title": "个人博客", "desc": "基于 Vue3 + Vite 的极简博客", "tag": "Vue" },
+                { "title": "数据可视化", "desc": "实时监控仪表盘，ECharts 驱动", "tag": "ECharts" },
+                { "title": "个人博客", "desc": "基于 Vue3 + Vite 的极简博客", "tag": "Vue" },
+                { "title": "数据可视化", "desc": "实时监控仪表盘，ECharts 驱动", "tag": "ECharts" },
+                { "title": "个人博客", "desc": "基于 Vue3 + Vite 的极简博客", "tag": "Vue" },
+                { "title": "数据可视化", "desc": "实时监控仪表盘，ECharts 驱动", "tag": "ECharts" }
+            ]
+        },
+        {
+            "name": "UI/UX 设计",
+            "items": [
+                { "title": "移动端 App 概念", "desc": "沉浸式音乐播放器界面设计", "tag": "Figma" },
+                { "title": "品牌 VI 手册", "desc": "为独立工作室设计的完整视觉系统", "tag": "Illustrator" }
+            ]
+        }
+    ]
+}

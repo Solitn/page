@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
     <script src="static/js/main.js" defer></script> <!-- Link to external JS file -->
-    <link rel="stylesheet" href="static/styles/styles.css"> <!-- Link to external CSS file -->
+    <script src="static/js/page2.js" defer></script> <!-- Link to external JS file -->
+    <link rel="stylesheet" href="static/styles/style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="static/styles/style2.css"> <!-- Link to external CSS file -->
 </head>
 <body>
     <div id="bg">
@@ -15,18 +17,18 @@
     <div id="header">
         <div id="header_name">Solitn</div>
         <nav id="navBar">
-            <button class="nav-btn active" data-page="home">首页</button>
-            <button class="nav-btn" data-page="works">作品</button>
-            <button class="nav-btn" data-page="more">更多</button>
+            <button class="nav-btn" onclick="showPage('page1')">首页</button>
+            <button class="nav-btn" onclick="showPage('page2')">作品</button>
+            <button class="nav-btn" onclick="showPage('page3')">更多</button>
         </nav>
         <div class="header-spacer"></div> 
     </div>
     <div id="content">
-        <div id="page1" class="page active">
+        <div id="page1" class="page">
             <div id="page1_container">
                 <!-- 左栏 -->
                 <div id="page1_left">
-                    <img id="page1_avatar" src="static/media/avatar/avatar.png" alt="头像">
+                    <img id="page1_avatar" src="static/media/avatar/avatar.webp" alt="头像">
                     <h2 id="page1_big_name">Solitn</h2>
                     <p id="page1_bio"></p>
                     <div id="page1_skills">
@@ -38,7 +40,7 @@
                 </div>
                 <!-- 右栏 -->
                 <div id="page1_right">
-                    <p id="page1_quote">"我的暑假已急哭"</p>
+                    <p id="page1_quote">"我的暑假已急哭 我的寒假已急哭 我的五一已急哭 我的国庆已急哭 我的双休已急哭 我的双休已急哭"</p>
                 </div>
                     <div id="page1_social">
                         <a href="https://space.bilibili.com/3632299019077665" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="B站">
@@ -61,8 +63,15 @@
                     </div>
             </div>
         </div>
-        <div id="page2" class="page">
+    <div id="page2" class="page">
+        <div id="page2_container">
+            <div id="page2-works-wrapper">
+                <div id="page2-works-scroll">
+                    <div id="page2-works"></div>
+                </div>
+            </div>
         </div>
+    </div>
         <div id="page3" class="page">
         </div>
     </div>
