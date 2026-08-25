@@ -20,5 +20,20 @@
                 { "title": "品牌 VI 手册", "desc": "为独立工作室设计的完整视觉系统", "tag": "Illustrator" }
             ]
         }
-    ]
+    ],
+    "timeline": [
+        {
+            "date": "2026.08.25",
+            "title": "建站-v1.0",
+            "description": "从零开始，搭建个人网站"
+        },
+        {
+            "date": "2026.08.26",
+            "title": "龙族3",
+            "description": "江赫forever"
+        }
+    ],
+    "others":{
+        "bg1":"bg2.jpg"
+    }
 }

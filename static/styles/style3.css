@@ -1,0 +1,350 @@
+/* ===== page3 主容器 ===== */
+#page3 {
+    margin-top: 100px;
+    height: calc(100vh - 100px);
+    overflow-y: overlay;
+    overflow-x: hidden;
+    padding: 20px 8px 40px 20px;
+    box-sizing: border-box;
+    scrollbar-gutter: stable;
+}
+
+#page3_container {
+    max-width: 1000px;
+    width: 100%;
+    min-height: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ===== 倒计时小部件 ===== */
+#countdown-widget {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 22px 30px 26px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+#countdown-widget h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 14px 0;
+    opacity: 0.85;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-item span {
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 12px;
+    border-radius: 12px;
+    min-width: 54px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.countdown-item label {
+    margin-top: 6px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.countdown-note {
+    margin: 12px 0 0 0;
+    font-size: 0.7rem;
+    opacity: 0.35;
+    letter-spacing: 1px;
+}
+
+/* ===== 横向一层 ===== */
+#timeline-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    min-height: 340px;
+    flex: 1;
+}
+
+/* ===== 历程模块（左侧） ===== */
+#timeline-module {
+    flex: 1.2;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 22px 24px 26px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#timeline-module h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 14px 0;
+    opacity: 0.85;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+#timeline-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-right: 6px;
+}
+
+/* ===== 历程时间线条目 ===== */
+.timeline-item {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.timeline-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 64px;
+}
+
+.timeline-date {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    padding-top: 2px;
+}
+
+.timeline-line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-height: 16px;
+    margin-top: 2px;
+}
+
+.timeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-item.active .timeline-dot {
+    background: rgba(100, 200, 255, 0.5);
+    border-color: rgba(100, 200, 255, 0.2);
+    box-shadow: 0 0 16px rgba(100, 200, 255, 0.1);
+}
+
+.timeline-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    min-height: 10px;
+}
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 1px 0 4px 0;
+}
+
+.timeline-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1px;
+}
+
+.timeline-desc {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.4;
+}
+
+/* ===== 历程滚动条 ===== */
+#timeline-container::-webkit-scrollbar {
+    width: 3px;
+}
+#timeline-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+#timeline-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+#timeline-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== 右侧预留区 ===== */
+#timeline-right {
+    flex: 0.8;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    min-height: 320px;
+}
+
+/* ===== 移动端适配 ===== */
+@media (max-width: 768px) {
+    #page3 {
+        margin-top: 80px;
+        height: calc(100vh - 80px);
+        padding: 12px 6px 30px 12px;
+    }
+    #page3_container {
+        gap: 18px;
+        min-height: calc(100% - 30px);
+    }
+    #countdown-widget {
+        padding: 16px 16px 20px;
+        border-radius: 18px;
+    }
+    #countdown-widget h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .countdown-item span {
+        font-size: 2.0rem;
+        min-width: 42px;
+        padding: 4px 8px;
+    }
+    .countdown-item label {
+        font-size: 0.6rem;
+    }
+    #countdown-display {
+        gap: 10px;
+    }
+
+    #timeline-row {
+        flex-direction: column;
+        gap: 14px;
+        min-height: auto;
+        flex: 1;
+    }
+    #timeline-module {
+        flex: 1;
+        padding: 16px 14px 20px;
+        border-radius: 18px;
+        min-height: 260px;
+    }
+    #timeline-module h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    #timeline-right {
+        flex: 1;
+        min-height: 60px;
+        border-radius: 18px;
+        font-size: 0.8rem;
+    }
+    .timeline-left {
+        width: 52px;
+    }
+    .timeline-date {
+        font-size: 0.6rem;
+    }
+    .timeline-dot {
+        width: 7px;
+        height: 7px;
+    }
+    .timeline-title {
+        font-size: 0.85rem;
+    }
+    .timeline-desc {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #page3 {
+        padding: 8px 4px 20px 8px;
+    }
+    #page3_container {
+        gap: 12px;
+    }
+    #countdown-widget {
+        padding: 12px 10px 16px;
+    }
+    #countdown-widget h2 {
+        font-size: 0.85rem;
+    }
+    .countdown-item span {
+        font-size: 1.6rem;
+        min-width: 36px;
+        padding: 2px 6px;
+    }
+    #timeline-module {
+        padding: 12px 10px 16px;
+        min-height: 200px;
+    }
+    .timeline-left {
+        width: 44px;
+    }
+    .timeline-date {
+        font-size: 0.55rem;
+    }
+    .timeline-title {
+        font-size: 0.8rem;
+    }
+    .timeline-desc {
+        font-size: 0.65rem;
+    }
+    #timeline-right {
+        min-height: 40px;
+        font-size: 0.7rem;
+    }
+}

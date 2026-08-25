@@ -1,4 +1,5 @@
-// 备用数据（JSON 加载失败时使用）
+globalData = {};  // 全局数据对象
+
 const DEFAULT_WORKS = {
     categories: [
         {
@@ -54,7 +55,11 @@ function loadWorks() {
             if (!res.ok) throw new Error('加载失败');
             return res.json();
         })
-        .then(data => renderWorks(data))
+        .then(data => {
+            globalData = data;
+            renderWorks(data);
+            setBg(globalData);
+        })
         .catch(err => {
             console.warn('使用备用数据', err);
             renderWorks(DEFAULT_WORKS);
@@ -63,3 +68,12 @@ function loadWorks() {
 
 // 页面加载后自动执行
 loadWorks();
+
+function setBg(data) {
+    const bgImage = document.getElementById('bg_image');
+        if (bgImage) {
+            console.log(data.others);
+            bgImage.style.backgroundImage = `url(static/media/bgs/${data.others.bg1})`;
+            
+        }
+}

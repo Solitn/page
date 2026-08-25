@@ -6,8 +6,10 @@
     <title>My Web Page</title>
     <script src="static/js/main.js" defer></script> <!-- Link to external JS file -->
     <script src="static/js/page2.js" defer></script> <!-- Link to external JS file -->
+    <script src="static/js/page3.js" defer></script> <!-- Link to external JS file -->
     <link rel="stylesheet" href="static/styles/style.css"> <!-- Link to external CSS file -->
     <link rel="stylesheet" href="static/styles/style2.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="static/styles/style3.css">
 </head>
 <body>
     <div id="bg">
@@ -73,6 +75,43 @@
         </div>
     </div>
         <div id="page3" class="page">
+            <div id="page3_container">
+                <div id="countdown-widget">
+                    <h2>  距2028河南高考结束  </h2>
+                    <div id="countdown-display">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <label>天</label>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <label>时</label>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <label>分</label>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <label>秒</label>
+                        </div>
+                    </div>
+                    <p class="countdown-note">目标：2028.6.9 18:15</p>
+                </div>
+
+                <!-- 横向一层：左历程 + 右预留 -->
+                <div id="timeline-row">
+                    <!-- 左侧：历程模块 -->
+                    <div id="timeline-module">
+                        <h2>我的历程</h2>
+                        <div id="timeline-container"></div>
+                    </div>
+                    <!-- 右侧：预留扩展 -->
+                    <div id="timeline-right">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
