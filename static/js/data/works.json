@@ -35,5 +35,22 @@
     ],
     "others":{
         "bg1":"bg2.jpg"
-    }
+    },
+    "links": [
+        {
+            "title": "GitHub",
+            "url": "https://github.com/solitn",
+            "desc": "开源仓库"
+        },
+        {
+            "title": "B站",
+            "url": "https://space.bilibili.com/3632299019077665",
+            "desc": "视频专栏"
+        },
+        {
+            "title": "html",
+            "url": "https://solitn.github.io/page/erii",
+            "desc": "龙三相关"
+        }
+    ]
 }

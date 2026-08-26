@@ -50,6 +50,7 @@
                 return;
             }
             renderTimeline(data.timeline);
+            renderLinks(data.links); 
         })
         .catch(error => {
             console.error('加载历程数据失败:', error);
@@ -95,3 +96,34 @@
         }
     }
 })();
+// ===== 链接导航（右侧） =====
+function renderLinks(links) {
+    const rightArea = document.getElementById('timeline-right');
+    if (!rightArea) return;
+
+    if (!links || links.length === 0) {
+        rightArea.innerHTML = '<span style="color: rgba(255,255,255,0.2);">暂无链接</span>';
+        return;
+    }
+
+    let html = `
+        <div class="links-container">
+            <h3>  快捷导航</h3>
+            <ul class="links-list">
+    `;
+    links.forEach(link => {
+        html += `
+            <li class="link-item">
+                <a href="${link.url}" target="_blank" rel="noopener noreferrer">
+                    <span class="link-title">${link.title}</span>
+                    <span class="link-desc">${link.desc || ''}</span>
+                </a>
+            </li>
+        `;
+    });
+    html += `
+            </ul>
+        </div>
+    `;
+    rightArea.innerHTML = html;
+}

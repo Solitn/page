@@ -226,7 +226,9 @@
 /* ===== 右侧预留区 ===== */
 #timeline-right {
     flex: 0.8;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px dashed rgba(255, 255, 255, 0.06);
     border-radius: 24px;
     display: flex;
@@ -238,7 +240,6 @@
     min-height: 320px;
 }
 
-/* ===== 移动端适配 ===== */
 @media (max-width: 768px) {
     #page3 {
         margin-top: 80px;
@@ -347,4 +348,106 @@
         min-height: 40px;
         font-size: 0.7rem;
     }
+}
+/* ===== 右侧导航区 ===== */
+#timeline-right {
+    flex: 0.8;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 22px 20px 26px;
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* 从顶部开始 */
+    align-items: stretch;          /* 子元素宽度填满 */
+    min-height: 320px;
+    overflow-y: auto;              /* 内容过多可滚动 */
+}
+
+/* 链接容器 */
+.links-container {
+    width: 100%;                  /* 占满父容器宽度 */
+    display: flex;
+    flex-direction: column;
+    flex: 1;                      /* 撑满剩余高度 */
+}
+
+#timeline-right h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 16px 0;
+    opacity: 0.7;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;                 /* 占满宽度 */
+    flex: 1;                     /* 撑满剩余高度，让项目从顶部开始排列 */
+}
+
+.link-item {
+    width: 100%;                 /* 横向占满 */
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.link-item a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    width: 100%;                 /* 填满父容器宽度 */
+    box-sizing: border-box;
+}
+
+.link-item a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+.link-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.link-desc {
+    font-size: 0.7rem;
+    opacity: 0.4;
+    margin-top: 2px;
+}
+
+/* 右侧滚动条样式 */
+#timeline-right::-webkit-scrollbar {
+    width: 3px;
+}
+#timeline-right::-webkit-scrollbar-track {
+    background: transparent;
+}
+#timeline-right::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+#timeline-right::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
